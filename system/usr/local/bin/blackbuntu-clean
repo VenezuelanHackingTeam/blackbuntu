@@ -1,0 +1,277 @@
+#!/usr/bin/env bash
+#
+# [Release]: Blackbuntu 20.04.3 LTS amd64
+# [Website]: https://blackbuntu.org/p/releases/?ver=20.04.3
+# [License]: http://www.gnu.org/licenses/gpl-3.0.html
+#
+# Ascii Art : https://www.askapache.com/online-tools/figlet-ascii/
+
+## ---------------- ##
+## Define Variables ##
+## ---------------- ##
+
+## Colour output
+## -------------
+t_error="\033[01;31m"	# Error
+t_valid="\033[01;32m"	# Valid
+t_alert="\033[01;33m"	# Alert
+t_title="\033[01;34m"	# Title
+t_reset="\033[00m"		# Reset
+
+## Clear screen
+## ------------
+function clearscreen()
+{
+	clear
+	sleep 2s
+}
+
+## Keep alive
+## ----------
+function keepalive()
+{
+	sudo -v
+	while true;
+	do
+		sudo -n true;
+		sleep 60s;
+		kill -0 "$$" || exit;
+	done 2>/dev/null &
+}
+
+## Load banner
+## -----------
+function showbanner()
+{
+	clear
+	echo -e "${t_error}  _     _            _    _                 _          ${t_reset}"
+	echo -e "${t_error} | |   | |          | |  | |               | |         ${t_reset}"
+	echo -e "${t_error} | |__ | | __ _  ___| | _| |__  _   _ _ __ | |_ _   _  ${t_reset}"
+	echo -e "${t_error} | '_ \| |/ _' |/ __| |/ / '_ \| | | | '_ \| __| | | | ${t_reset}"
+	echo -e "${t_error} | |_) | | (_| | (__|   <| |_) | |_| | | | | |_| |_| | ${t_reset}"
+	echo -e "${t_error} |_'__/|_|\__'_|\___|_|\_\_'__/ \__'_|_| |_|\__|\__'_| ${t_reset}"
+	echo -e "${t_error}                                    v20.04.3 LTS amd64 ${t_reset}"
+	echo
+	echo -e "${t_valid}[i] [Package]: blackbuntu-clean${t_reset}"
+	echo -e "${t_valid}[i] [Website]: https://blackbuntu.org${t_reset}"
+  	sleep 3s
+}
+
+## Check Internet status
+## ---------------------
+function checkinternet()
+{
+	for i in {1..10};
+	do
+		ping -c 1 -W ${i} www.google.com &>/dev/null && break;
+	done
+
+	if [[ "$?" -ne 0 ]];
+	then
+		echo
+		echo -e "${t_error}Error ~ Possible DNS issues or no Internet connection${t_reset}"
+		echo -e "${t_error}Quitting ...${t_reset}\n"
+		exit 1
+	fi
+}
+
+## Warning
+## -------
+function warning()
+{
+	echo
+    echo -e "${t_error}*** Warning ***${t_reset}"
+    echo -e "${t_error}You are about to clean and remove all temporary files and logs${t_reset}"
+    echo -e "${t_error}We recommend to exit all other programs before to proceed${t_reset}"
+    echo ""
+    read -p "Do you want to continue? [y/N] " yn
+    case $yn in
+        [Yy]* )
+            ;;
+        [Nn]* )
+            exit
+            ;;
+        * )
+            exit
+            ;;
+    esac
+}
+
+## Load status
+## -----------
+function loadstatus()
+{
+	now="[$(date +'%Y-%m-%d %H:%I:%S')]"
+
+	if [ "$2" == "error" ];
+    then
+        status="$t_error${now}$t_reset"
+	fi
+
+	if [ "$2" == "valid" ];
+    then
+        status="$t_valid${now}$t_reset"
+	fi
+
+	if [ "$2" == "alert" ];
+    then
+        status="$t_alert${now}$t_reset"
+	fi
+
+	if [ "$2" == "title" ];
+    then
+        status="$t_title${now}$t_reset"
+	fi
+
+	if [ "$2" == "reset" ];
+    then
+        status="$t_reset${now}$t_reset"
+	fi
+
+	txt="${status}-> $1"
+	echo -e "$txt"
+	sleep 2s
+}
+
+## Secure Delete
+## -------------
+function securedelete()
+{
+    path=$1
+	if [ -d "$path" ];
+	then
+		srm -f -r -v $path >/dev/null 2>&1
+	elif [ -f "$path" ];
+	then
+		srm -f -v $path >/dev/null 2>&1
+	fi
+}
+
+## Clean unwanted launchers
+## ------------------------
+function cleanlaunchers()
+{
+	sudo rm -f /usr/share/applications/arduino.desktop
+	sudo rm -f /usr/share/applications/edb.desktop
+	sudo rm -f /usr/share/applications/ettercap.desktop
+	sudo rm -f /usr/share/applications/guymager.desktop
+	sudo rm -f /usr/share/applications/kismet.desktop
+	sudo rm -f /usr/share/applications/lstopo.desktop
+	sudo rm -f /usr/share/applications/lynis.desktop
+	sudo rm -f /usr/share/applications/maltego_config.desktop
+	sudo rm -f /usr/share/applications/maltego.desktop
+	sudo rm -f /usr/share/applications/ophcrack.desktop
+	sudo rm -f /usr/share/applications/torbrowser-settings.desktop
+	sudo rm -f /usr/share/applications/ubiquity.desktop
+	sudo rm -f /usr/share/applications/wireshark.desktop
+}
+
+## Load core system
+## ----------------
+function coresystem()
+{
+	## Delete `firefox` logs
+	## ---------------------
+	securedelete /home/$USER/.mozilla/firefox/backup/
+	securedelete /home/$USER/.cache/mozilla/firefox/backup/
+	sudo mkdir -p /home/$USER/.mozilla/firefox/backup/ /home/$USER/.cache/mozilla/firefox/backup/
+	sudo mv /home/$USER/.mozilla/firefox/*.default/*.sqlite  /home/$USER/.mozilla/firefox/backup/ >/dev/null 2>&1
+	sudo mv /home/$USER/.mozilla/firefox/*.default/sessionstore.js /home/$USER/.mozilla/firefox/backup/ >/dev/null 2>&1
+	sudo mv /home/$USER/.cache/mozilla/firefox/*.default/* /home/$USER/.cache/mozilla/firefox/backup/ >/dev/null 2>&1
+	securedelete /home/$USER/.mozilla/firefox/*.default/cookies.sqlite
+	securedelete /home/$USER/.mozilla/firefox/*.default/*.sqlite
+	securedelete /home/$USER/.mozilla/firefox/*default/sessionstore.js
+	securedelete /home/$USER/.cache/mozilla/firefox/*.default/*
+	loadstatus "Delete Firefox logs" "title"
+
+	## Delete user cache thumbnails
+	## ----------------------------
+	securedelete /home/$USER/.cache/thumbnails/fail
+	securedelete /home/$USER/.cache/thumbnails/large
+	securedelete /home/$USER/.cache/thumbnails/normal
+	loadstatus "Delete user cache thumbnails" "title"
+
+	## Delete files history
+	## --------------------
+	securedelete /home/$USER/.local/share/recently-used.xbel
+	loadstatus "Delete files history" "title"
+
+	## Delete user `ssh` keys
+	## ----------------------
+	securedelete /home/$USER/.ssh/authorized_keys
+	securedelete /home/$USER/.ssh/known_hosts
+	securedelete /home/$USER/.ssh/known_hosts.old
+	loadstatus "Delete SSH user keys" "title"
+
+	## Remove unnecessary documentations
+	## ---------------------------------
+	array=( man groff info lintian linda )
+	for item in "${array[@]}"
+	do
+		securedelete /usr/share/$item
+		loadstatus "Delete /usr/share/$item documentations" "title"
+	done
+
+	securedelete /var/cache/man
+	sudo find /usr/share/doc -depth -type f ! -name copyright -exec rm -rf {} \; >/dev/null 2>&1
+	sudo find /usr/share/doc -empty -exec rm -rf {} \; >/dev/null 2>&1
+	sudo find /usr/share/locale -mindepth 1 -maxdepth 1 ! -name 'en' -exec rm -rf {} \; >/dev/null 2>&1
+	loadstatus "Delete persistents documentations" "title"
+
+	## Delete persistents files
+	## ------------------------
+	securedelete /home/$USER/.local/share/Trash/*
+	loadstatus "Delete persistents files" "title"
+
+	## Remove `apt` cache
+	## ------------------
+	securedelete /var/cache/apt/*
+	loadstatus "Delete APT cache" "title"
+
+	## Correct folders permissions
+	## ---------------------------
+	sudo chown -R $USER:$USER /var/www
+	loadstatus "Folders permissions corrected" "title"
+
+	## Clear `/var/log` recursively
+	## ----------------------------
+	array=( *.gz *.journal *.old *.1 *.log )
+	for item in "${array[@]}"
+	do
+		sudo find /var/log/ -type f -name $item -exec rm -f {} \; >/dev/null 2>&1
+		loadstatus "System log /var/log/$item file removed" "title"
+	done
+
+	array=( btmp debug faillog lastlog messages syslog wtmp cups/access_log installer/debug installer/media-info installer/partman installer/syslog installer/telemetry installer/version )
+	for item in "${array[@]}"
+	do
+		securedelete /var/log/$item
+		sudo touch /var/log/$item
+		loadstatus "System log /var/log/$item file purged" "title"
+	done
+
+	## Terminate
+	## ---------
+	loadstatus "Process completed" "valid"
+	sleep 2s
+}
+
+## Launch
+## ------
+function launch()
+{
+	clearscreen
+	keepalive
+	showbanner
+	checkinternet
+	warning
+	clearscreen
+	coresystem
+	cleanlaunchers
+}
+
+## -------- ##
+## Callback ##
+## -------- ##
+
+launch

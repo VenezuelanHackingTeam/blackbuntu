@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Categories=Forensics;
+Exec=sh -c 'chntpw; $SHELL'
+Icon=/usr/share/icons/blackbuntu/blackbuntu-default.png
+Name=Chntpw
+Terminal=true
+Type=Application

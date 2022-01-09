@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Categories=Cryptocurrencies;
+Exec=sh -c '/opt/blackbuntu/cryptocurrencies/electrum/electrum.AppImage; $SHELL'
+Icon=/usr/share/icons/blackbuntu/blackbuntu-electrum.png
+Name=Electrum
+Terminal=false
+Type=Application

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+    <wallpaper>
+        <name>Blackbuntu Darkred</name>
+        <filename>/usr/share/backgrounds/blackbuntu-darkred-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Desktop</name>
+        <filename>/usr/share/backgrounds/blackbuntu-desktop-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Fusion</name>
+        <filename>/usr/share/backgrounds/blackbuntu-fusion-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Keyboard</name>
+        <filename>/usr/share/backgrounds/blackbuntu-keyboard-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Minimalism</name>
+        <filename>/usr/share/backgrounds/blackbuntu-minimalism-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blabuntu RedTeam</name>
+        <filename>/usr/share/backgrounds/blackbuntu-redteam-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Simple</name>
+        <filename>/usr/share/backgrounds/blackbuntu-simple-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Vintage</name>
+        <filename>/usr/share/backgrounds/blackbuntu-vintage-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Warty</name>
+        <filename>/usr/share/backgrounds/blackbuntu-warty-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+    <wallpaper>
+        <name>Blackbuntu Waves</name>
+        <filename>/usr/share/backgrounds/blackbuntu-waves-2560x1440.jpg</filename>
+        <options>zoom</options>
+        <pcolor>#000000</pcolor>
+        <scolor>#000000</scolor>
+        <shade_type>solid</shade_type>
+    </wallpaper>
+</wallpapers>
