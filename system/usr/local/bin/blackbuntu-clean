@@ -130,7 +130,7 @@ function loadstatus()
 
 	txt="${status}-> $1"
 	echo -e "$txt"
-	sleep 2s
+	sleep 1s
 }
 
 ## Secure Delete
@@ -170,6 +170,10 @@ function cleanlaunchers()
 ## ----------------
 function coresystem()
 {
+	## Start
+	## -----
+	loadstatus "Starting clean process ..." "title"
+
 	## Delete `firefox` logs
 	## ---------------------
 	securedelete /home/$USER/.mozilla/firefox/backup/

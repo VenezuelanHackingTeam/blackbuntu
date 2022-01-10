@@ -130,7 +130,7 @@ function loadstatus()
 
 	txt="${status}-> $1"
 	echo -e "$txt"
-	sleep 2s
+	sleep 1s
 }
 
 ## Update/Upgrade System
@@ -166,10 +166,14 @@ function cleanlaunchers()
 ## ----------------
 function coresystem()
 {
+	## Start
+	## -----
+	loadstatus "Starting clean process ..." "title"
+
 	## Github Update
 	## -------------
 	cd /tmp/
-	sudo wget -q -O /tmp/update.sh "https://raw.githubusercontent.com/neoslab/blackbuntu/master/tmp/update.sh"
+	sudo wget -q -O /tmp/update.sh "https://raw.githubusercontent.com/neoslab/blackbuntu/master/update.sh"
 	if [ -f "/tmp/update.sh" ];
 	then
 		sudo chmod +x /tmp/update.sh

@@ -202,8 +202,12 @@ function syncstrap()
 ## ---------------------
 function gendebpack()
 {
-	git clone https://github.com/neoslab/packages
 	basetree="$path_script/packages"
+	if [ ! -d "$basetree" ]
+	then
+	    git clone https://github.com/neoslab/packages
+	fi
+
 	for basedir in "$basetree"/*;
 	do
 		for deb in "$basedir"/*;
