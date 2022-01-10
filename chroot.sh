@@ -409,6 +409,18 @@ cp /tmp/system/etc/skel/bashrc /etc/skel/.bashrc
 rm -f /root/.bashrc
 cp /tmp/system/root/bashrc /root/.bashrc
 
+## Replace `casper.conf`
+## --------------------
+rm -f /etc/casper.conf
+cp /tmp/system/etc/casper.conf /etc/
+
+## Replace `os-release`
+## --------------------
+rm -f /etc/os-release
+rm -f /usr/lib/os-release
+cp /tmp/system/usr/lib/os-release /usr/lib/
+ln -s /usr/lib/os-release /etc/os-release
+
 ## Configure backgrounds
 ## ---------------------
 rm -rf /usr/share/backgrounds/*

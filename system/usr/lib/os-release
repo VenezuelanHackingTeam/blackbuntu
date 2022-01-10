@@ -1,0 +1,12 @@
+NAME="Blackbuntu"
+VERSION="20.04.3 LTS (Focal Fossa)"
+ID=blackbuntu
+ID_LIKE=debian
+PRETTY_NAME="Blackbuntu 20.04.3 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://blackbuntu.org/"
+SUPPORT_URL="https://blackbuntu.org/p/help"
+BUG_REPORT_URL="https://blackbuntu.org/p/report"
+PRIVACY_POLICY_URL="https://blackbuntu.org/p/privacy""
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
