@@ -35,7 +35,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
 
 ## Dock Favorites
 ## --------------
-gsettings set org.gnome.shell favorite-apps ['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'torbrowser.desktop', 'org.kde.kate.desktop', 'org.keepassxc.KeePassXC.desktop', 'rhythmbox.desktop', 'gnome-control-center.desktop']
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'torbrowser.desktop', 'org.kde.kate.desktop', 'org.keepassxc.KeePassXC.desktop', 'rhythmbox.desktop', 'gnome-control-center.desktop']"
 
 ## Create Apps Folders
 ## -------------------
