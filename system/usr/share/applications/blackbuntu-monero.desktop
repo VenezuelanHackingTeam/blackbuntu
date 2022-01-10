@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Categories=Cryptocurrencies;
+Categories=Crypto;
 Exec=sh -c '/opt/blackbuntu/cryptocurrencies/monero/monero-wallet-gui; $SHELL'
 Icon=/usr/share/icons/blackbuntu/blackbuntu-monero.png
 Name=Monero

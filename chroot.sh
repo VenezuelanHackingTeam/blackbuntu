@@ -119,7 +119,7 @@ apt-get -y install ruby ruby-dev
 
 ## Install `apt`
 ## -------------
-apt-get -y apt-transport-https apt-utils
+apt-get -y install apt-transport-https apt-utils
 
 ## Install common packages
 ## -----------------------
@@ -147,7 +147,7 @@ apt-get -y clean && apt-get -y autoclean
 ## Create folders tree
 ## --------------------
 mkdir -p /opt/blackbuntu
-mkdir -p /opt/blackbuntu/{cracking,cryptocurrencies,exploitation,forensics,hardening,information-gathering,networking,reporting,reverse-engineering,sniffing-spoofing,social-engineering,stress-testing,utilities,vulnerability-analysis,web-applications,wireless}
+mkdir -p /opt/blackbuntu/{cracking,crypto,exploitation,forensics,hardening,information-gathering,networking,reporting,reverse-engineering,sniffing-spoofing,social-engineering,stress-testing,utilities,vulnerability-analysis,web-applications,wireless}
 
 ## Install cracking tools
 ## -----------------------
@@ -344,9 +344,9 @@ mv /tmp/burpsuite.jar /opt/blackbuntu/exploitation/burpsuite
 ## https://electrum.org
 ## --------------------
 wget --progress=dot -O "/tmp/electrum.AppImage" "https://download.electrum.org/4.1.5/electrum-4.1.5-x86_64.AppImage"
-mkdir -p /opt/blackbuntu/cryptocurrencies/electrum
-mv /tmp/electrum.AppImage /opt/blackbuntu/cryptocurrencies/electrum/
-chmod +x /opt/blackbuntu/cryptocurrencies/electrum/electrum.AppImage
+mkdir -p /opt/blackbuntu/crypto/electrum
+mv /tmp/electrum.AppImage /opt/blackbuntu/crypto/electrum/
+chmod +x /opt/blackbuntu/crypto/electrum/electrum.AppImage
 
 ## Install `maltego`
 ## https://maltego.com
@@ -359,8 +359,8 @@ dpkg -i /tmp/Maltego.v4.2.19.13940.deb
 ## -------------------------
 wget --progress=dot -O "/tmp/monero-gui-linux-x64-v0.17.2.3.tar.bz2" "https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.17.2.3.tar.bz2"
 tar -xf /tmp/monero-gui-linux-x64-v0.17.2.3.tar.bz2
-mv /tmp/monero-gui-v0.17.2.3 /opt/blackbuntu/cryptocurrencies/monero
-chmod +x /opt/blackbuntu/cryptocurrencies/monero/monero-wallet-gui
+mv /tmp/monero-gui-v0.17.2.3 /opt/blackbuntu/crypto/monero
+chmod +x /opt/blackbuntu/crypto/monero/monero-wallet-gui
 
 ## Install `wpscan`
 ## https://wpscan.com

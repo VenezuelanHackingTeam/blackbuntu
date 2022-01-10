@@ -1,1 +1,77 @@
 #!/usr/bin/env bash
+#
+# [Release]: Blackbuntu 20.04.3 LTS amd64
+# [Website]: https://blackbuntu.org/p/releases/?ver=20.04.3
+# [License]: http://www.gnu.org/licenses/gpl-3.0.html
+
+## Dark theme
+## ----------
+#gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+
+## Wallpaper
+## ---------
+gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/blackbuntu-warty-2560x1440.jpg
+
+## Extend Height
+## -------------
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height true
+
+## Dock Position
+## -------------
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position LEFT
+
+## Dock Transparency
+## -----------------
+gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
+
+## Dock Icon Size
+## --------------
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 32
+
+## Dock Unity
+## ----------
+gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
+
+## Dock Favorites
+## --------------
+gsettings set org.gnome.shell favorite-apps ['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'torbrowser.desktop', 'org.kde.kate.desktop', 'org.keepassxc.KeePassXC.desktop', 'rhythmbox.desktop', 'gnome-control-center.desktop']
+
+## Create Apps Folders
+## -------------------
+gsettings set org.gnome.desktop.app-folders folder-children "['cracking', 'crypto', 'exploitation', 'forensics', 'hardening', 'information-gathering', 'networking', 'reporting', 'reverse-engineering', 'sniffing-spoofing', 'social-engineering', 'stress-testing', 'utilities', 'vulnerability-analysis', 'web-applications', 'wireless']"
+
+## Configure Gnome Dash
+## --------------------
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/cracking/ name "01 - Cracking"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/cracking/ categories "['Cracking']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/crypto/ name "02 - Crypto"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/crypto/ categories "['Crypto']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/exploitation/ name "03 - Exploitation"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/exploitation/ categories "['Exploitation']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/forensics/ name "04 - Forensics"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/forensics/ categories "['Forensics']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/hardening/ name "05 - Hardening"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/hardening/ categories "['Hardening']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/information-gathering/ name "06 - Information Gathering"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/information-gathering/ categories "['Information Gathering']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/networking/ name "07 - Networking"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/networking/ categories "['Networking']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reporting/ name "08 - Reporting"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reporting/ categories "['Reporting']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reverse-engineering/ name "09 - Reverse Engineering"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reverse-engineering/ categories "['Reverse Engineering']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/sniffing-spoofing/ name "10 - Sniffing - Spoofing"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/sniffing-spoofing/ categories "['Sniffing - Spoofing']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/social-engineering/ name "11 - Social Engineering"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/social-engineering/ categories "['Social Engineering']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/stress-testing/ name "12 - Stress Testing"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/stress-testing/ categories "['Stress Testing']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/utilities/ name "13 - Utilities"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/utilities/ categories "['Utilities']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/vulnerability-analysis/ name "14 - Vulnerability Analysis"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/vulnerability-analysis/ categories "['Vulnerability Analysis']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/web-applications/ name "15 - Web Applications"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/web-applications/ categories "['Web Applications']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/wireless/ name "16 - Wireless"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/wireless/ categories "['Wireless']"
