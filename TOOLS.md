@@ -90,6 +90,8 @@ Tools present in the Blackbuntu pentesting distribution
 
 * * *
 
+#### Crypto tools
+
 - [monero](https://www.getmonero.org)
 - [electrum](https://electrum.org)
 
@@ -180,13 +182,15 @@ Tools present in the Blackbuntu pentesting distribution
 - [enumiax](https://enumiax.sourceforge.net/)
 - [fierce](https://github.com/mschwager/fierce)
 - [gnmap](https://github.com/themightyshiv/gnmap)
+- [holehe](https://github.com/megadose/holehe)
+- [ignorant](https://github.com/megadose/ignorant)
 - [intrace](https://github.com/robertswiecki/intrace)
 - [lbd](http://ge.mine.nu/code/)
 - [linenum](https://github.com/rebootuser/LinEnum)
-- [maltego](https://maltego.com)
 - [phoneinfoga](https://github.com/sundowndev/phoneinfoga)
 - [smtp-user-enum](https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum)
 - [sublist3r](https://github.com/aboul3la/Sublist3r)
+- [toutatis](https://github.com/megadose/toutatis)
 
 * * *
 

@@ -6,7 +6,7 @@ Official repository of the Blackbuntu pentesting distribution.
 
 #### Tools
 
-Currently Blackbuntu includes [245 pre-installed tools](https://github.com/neoslab/blackbuntu/blob/main/TOOLS.md) dedicated to ethical hacking and pentesting.
+Currently Blackbuntu includes [247 pre-installed tools](https://github.com/neoslab/blackbuntu/blob/main/TOOLS.md) dedicated to ethical hacking and pentesting.
 
 * * *
 
@@ -18,4 +18,3 @@ Currently Blackbuntu includes [245 pre-installed tools](https://github.com/neosl
 - https://help.ubuntu.com/community/LiveCDCustomization
 - https://earthly.dev/blog/creating-and-hosting-your-own-deb-packages-and-apt-repo/
 - https://github.com/BenJetson/gnome-dash-fix
-- https://github.com/megadose
