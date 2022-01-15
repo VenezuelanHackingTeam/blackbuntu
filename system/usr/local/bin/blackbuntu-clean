@@ -172,7 +172,7 @@ function coresystem()
 {
 	## Start
 	## -----
-	loadstatus "Starting clean process ..." "title"
+	loadstatus "Starting clean process ..." "alert"
 
 	## Delete `firefox` logs
 	## ---------------------

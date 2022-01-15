@@ -75,7 +75,7 @@ apt-get -y install casper discover grub2-common grub-common grub-gfxpayload-list
 
 ## Install `kernel`
 ## ----------------
-apt-get -y install linux-headers-generic linux-image-generic
+apt-get -y install linux-headers-$target_kernel_version linux-image-$target_kernel_version
 
 ## Install `ubiquity`
 ## ------------------

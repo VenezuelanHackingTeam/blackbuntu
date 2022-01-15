@@ -168,7 +168,7 @@ function coresystem()
 {
 	## Start
 	## -----
-	loadstatus "Starting clean process ..." "title"
+	loadstatus "Starting update process ..." "alert"
 
 	## Github Update
 	## -------------
