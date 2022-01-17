@@ -241,9 +241,9 @@ function buildiso()
     rm -rf image
     mkdir -p image/{casper,isolinux,install}
 
-	# Copy initrd / vmlinuz
-	sudo cp diskbase/boot/vmlinuz-$target_kernel_version image/casper/vmlinuz
-    sudo cp diskbase/boot/initrd.img-$target_kernel_version image/casper/initrd
+	# Copy initrd/vmlinuz
+	sudo cp diskbase/boot/vmlinuz-**-**-generic image/casper/vmlinuz
+	sudo cp diskbase/boot/initrd.img-**-**-generic image/casper/initrd
 
 	# Import Memtest
     sudo cp diskbase/boot/memtest86+.bin image/install/memtest86+

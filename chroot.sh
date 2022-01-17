@@ -75,7 +75,7 @@ apt-get -y install casper discover grub2-common grub-common grub-gfxpayload-list
 
 ## Install `kernel`
 ## ----------------
-apt-get -y install linux-headers-$target_kernel_version linux-image-$target_kernel_version
+apt-get -y install linux-generic
 
 ## Install `ubiquity`
 ## ------------------
@@ -446,11 +446,11 @@ cp /tmp/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymou
 
 ## Update `initframs`
 ## ------------------
-update-initramfs -u -k $target_kernel_version
+update-initramfs -u
 
 ## Update `grub`
 ## -------------
-update-grub
+#update-grub
 
 ## Import icons
 ## ------------

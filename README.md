@@ -10,7 +10,7 @@ Currently Blackbuntu includes [247 pre-installed tools](https://github.com/neosl
 
 * * *
 
-#### Reference
+#### References
 
 - https://github.com/mvallim/live-custom-ubuntu-from-scratch
 - https://bugs.launchpad.net/cubic/+bug/1882346
