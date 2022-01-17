@@ -446,7 +446,7 @@ cp /tmp/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymou
 
 ## Update `initframs`
 ## ------------------
-update-initramfs -u
+#update-initramfs -u
 
 ## Update `grub`
 ## -------------
