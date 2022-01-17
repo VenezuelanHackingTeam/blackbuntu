@@ -418,6 +418,12 @@ cp /tmp/system/root/bashrc /root/.bashrc
 rm -f /etc/casper.conf
 cp /tmp/system/etc/casper.conf /etc/
 
+## Replace `dconf`
+## --------------
+mkdir -p /etc/skel/.config
+rm -rf /etc/skel/.config/dconf
+cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
+
 ## Replace `os-release`
 ## --------------------
 rm -f /etc/os-release
