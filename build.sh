@@ -58,7 +58,7 @@ function showbanner()
 	echo -e "${t_error} | '_ \| |/ _' |/ __| |/ / '_ \| | | | '_ \| __| | | | ${t_reset}"
 	echo -e "${t_error} | |_) | | (_| | (__|   <| |_) | |_| | | | | |_| |_| | ${t_reset}"
 	echo -e "${t_error} |_'__/|_|\__'_|\___|_|\_\_'__/ \__'_|_| |_|\__|\__'_| ${t_reset}"
-	echo -e "${t_error}                                    v20.04.3 LTS amd64 ${t_reset}"
+	echo -e "${t_error}                                      v20.04 LTS amd64 ${t_reset}"
 	echo
 	echo -e "${t_valid}[i] [Package]: build.sh${t_reset}"
 	echo -e "${t_valid}[i] [Website]: https://blackbuntu.org${t_reset}"

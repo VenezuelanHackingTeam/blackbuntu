@@ -413,23 +413,11 @@ cp /tmp/system/etc/skel/bashrc /etc/skel/.bashrc
 rm -f /root/.bashrc
 cp /tmp/system/root/bashrc /root/.bashrc
 
-## Replace `casper.conf`
-## --------------------
-rm -f /etc/casper.conf
-cp /tmp/system/etc/casper.conf /etc/
-
 ## Replace `dconf`
 ## --------------
-mkdir -p /etc/skel/.config
-rm -rf /etc/skel/.config/dconf
-cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
-
-## Replace `os-release`
-## --------------------
-rm -f /etc/os-release
-rm -f /usr/lib/os-release
-cp /tmp/system/usr/lib/os-release /usr/lib/
-ln -s /usr/lib/os-release /etc/os-release
+#mkdir -p /etc/skel/.config
+#rm -rf /etc/skel/.config/dconf
+#cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
 
 ## Configure backgrounds
 ## ---------------------
@@ -442,6 +430,18 @@ cp /tmp/system/usr/share/gnome-background-properties/* /usr/share/gnome-backgrou
 ## -------------------
 cp /tmp/system/usr/local/bin/* /usr/local/bin/
 chmod +x /usr/local/bin/blackbuntu-*
+
+## Replace `casper.conf`
+## --------------------
+rm -f /etc/casper.conf
+cp /tmp/system/etc/casper.conf /etc/
+
+## Replace `os-release`
+## --------------------
+rm -f /etc/os-release
+rm -f /usr/lib/os-release
+cp /tmp/system/usr/lib/os-release /usr/lib/
+ln -s /usr/lib/os-release /etc/os-release
 
 ## Configure `plymouth`
 ## --------------------
