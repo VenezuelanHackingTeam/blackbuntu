@@ -100,6 +100,7 @@ Tools present in the Blackbuntu pentesting distribution
 #### Exploitation tools
 
 - [thc-ipv6](https://packages.ubuntu.com/focal/thc-ipv6)
+- [websploit](https://packages.ubuntu.com/focal/websploit)
 - [yersinia](https://packages.ubuntu.com/focal/yersinia)
 - [burpsuite](https://portswigger.net/burp)
 - [cge](http://www.blackangels.it/)
@@ -277,7 +278,6 @@ Tools present in the Blackbuntu pentesting distribution
 - [netcat](https://packages.ubuntu.com/focal/netcat)
 - [net-tools](https://packages.ubuntu.com/focal/net-tools)
 - [polenum](https://packages.ubuntu.com/focal/polenum)
-- [dnsftp](https://github.com/breenmachine/dnsftp)
 - [dracnmap](https://github.com/screetsec/Dracnmap)
 - [ridenum](https://github.com/trustedsec/ridenum)
 - [subbrute](https://github.com/TheRook/subbrute)
@@ -291,7 +291,6 @@ Tools present in the Blackbuntu pentesting distribution
 - [sqlmap](https://packages.ubuntu.com/focal/sqlmap)
 - [bed](http://ww5.snake-basket.de/)
 - [jsql-injection](https://github.com/ron190/jsql-injection)
-- [oscanner](http://www.cqure.net/wp/tools/database/oscanner/)
 - [sfuzz](http://aconole.brad-x.com/programs/sfuzz.html)
 - [tnscmd10g](http://www.red-database-security.com/)
 - [unix-privesc](https://pentestmonkey.net/tools/audit/unix-privesc-check)
@@ -302,13 +301,11 @@ Tools present in the Blackbuntu pentesting distribution
 
 - [dirb](https://packages.ubuntu.com/focal/dirb)
 - [gobuster](https://packages.ubuntu.com/focal/gobuster)
-- [websploit](https://packages.ubuntu.com/focal/websploit)
 - [wfuzz](https://packages.ubuntu.com/focal/wfuzz)
 - [whatweb](https://packages.ubuntu.com/focal/whatweb)
 - [cmsmap](https://github.com/Dionach/CMSmap)
 - [dirbuster](https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project)
 - [hurl](https://github.com/fnord0/hURL)
-- [joomscan](https://github.com/OWASP/joomscan)
 - [wpscan](https://wpscan.com)
 
 * * *
@@ -317,7 +314,6 @@ Tools present in the Blackbuntu pentesting distribution
 
 - [aircrack-ng](https://packages.ubuntu.com/focal/aircrack-ng)
 - [airgraph-ng](https://packages.ubuntu.com/focal/airgraph-ng)
-- [cowpatty](https://packages.ubuntu.com/focal/cowpatty)
 - [kismet](https://packages.ubuntu.com/focal/kismet)
 - [mfcuk](https://packages.ubuntu.com/focal/mfcuk)
 - [mfoc](https://packages.ubuntu.com/focal/mfoc)
@@ -325,11 +321,7 @@ Tools present in the Blackbuntu pentesting distribution
 - [pixiewps](https://packages.ubuntu.com/focal/pixiewps)
 - [reaver](https://packages.ubuntu.com/focal/reaver)
 - [wifite](https://packages.ubuntu.com/focal/wifite)
-- [airsnort](https://sourceforge.net/projects/airsnort/)
 - [blueranger](http://www.hackfromacave.com/projects/blueranger.html)
-- [cowpatty](https://www.willhackforsushi.com/?page_id=50)
-- [crackle](https://github.com/mikeryan/crackle)
-- [eapmd5pass](https://www.willhackforsushi.com/?page_id=67)
 - [fluxion](https://github.com/FluxionNetwork/fluxion)
 - [wifi-honey](https://www.digininja.org/projects/wifi_honey.php7)
 - [wps-breaker](https://github.com/SilentGhostX/HT-WPS-Breaker)

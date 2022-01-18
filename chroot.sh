@@ -167,7 +167,7 @@ done
 
 ## Install exploitation tools
 ## --------------------------
-apt-get -y install thc-ipv6 yersinia
+apt-get -y install thc-ipv6 websploit yersinia
 packages="/tmp/packages/exploitation"
 for deb in "$packages"/*;
 do
@@ -311,7 +311,7 @@ done
 
 ## Install web applications tools
 ## ------------------------------
-apt-get -y install dirb gobuster websploit wfuzz whatweb
+apt-get -y install dirb gobuster wfuzz whatweb
 packages="/tmp/packages/web-applications"
 for deb in "$packages"/*;
 do
@@ -415,9 +415,9 @@ cp /tmp/system/root/bashrc /root/.bashrc
 
 ## Replace `dconf`
 ## --------------
-#mkdir -p /etc/skel/.config
-#rm -rf /etc/skel/.config/dconf
-#cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
+mkdir -p /etc/skel/.config
+rm -rf /etc/skel/.config/dconf
+cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
 
 ## Configure backgrounds
 ## ---------------------

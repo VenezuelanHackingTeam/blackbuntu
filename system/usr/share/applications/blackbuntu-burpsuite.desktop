@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Categories=Web Applications;
+Categories=Exploitation;
 Exec=/usr/bin/java -jar /opt/blackbuntu/exploitation/burpsuite/burpsuite.jar
 Icon=/usr/share/icons/blackbuntu/blackbuntu-burpsuite.png
 Name=Burpsuite
