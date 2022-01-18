@@ -314,6 +314,7 @@ Tools present in the Blackbuntu pentesting distribution
 
 - [aircrack-ng](https://packages.ubuntu.com/focal/aircrack-ng)
 - [airgraph-ng](https://packages.ubuntu.com/focal/airgraph-ng)
+- [cowpatty](https://packages.ubuntu.com/focal/cowpatty)
 - [kismet](https://packages.ubuntu.com/focal/kismet)
 - [mfcuk](https://packages.ubuntu.com/focal/mfcuk)
 - [mfoc](https://packages.ubuntu.com/focal/mfoc)
