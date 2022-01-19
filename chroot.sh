@@ -155,7 +155,7 @@ mkdir -p /opt/blackbuntu/{cracking,crypto,exploitation,forensics,hardening,infor
 
 ## Install cracking tools
 ## -----------------------
-apt-get -y install brutespray cewl cmospwd crunch hashcat hydra john maskprocessor medusa ncrack ophcrack patator statsprocessor
+apt-get -y install brutespray cewl cmospwd crunch hashcat hydra john medusa ncrack ophcrack patator
 packages="/tmp/packages/cracking"
 for deb in "$packages"/*;
 do
