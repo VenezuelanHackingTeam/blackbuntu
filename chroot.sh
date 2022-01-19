@@ -167,7 +167,7 @@ done
 
 ## Install exploitation tools
 ## --------------------------
-apt-get -y install thc-ipv6 websploit yersinia
+apt-get -y install websploit yersinia
 packages="/tmp/packages/exploitation"
 for deb in "$packages"/*;
 do
@@ -179,7 +179,7 @@ done
 
 ## Install forensics tools
 ## -----------------------
-apt-get -y install capstone-tool chntpw dc3dd extundelete foremost galleta guymager p0f
+apt-get -y install chntpw dc3dd extundelete foremost galleta guymager p0f
 packages="/tmp/packages/forensics"
 for deb in "$packages"/*;
 do
@@ -191,7 +191,7 @@ done
 
 ## Install hardening tools
 ## -----------------------
-apt-get -y install android-sdk apktool arduino lynis
+apt-get -y install apktool arduino lynis
 packages="/tmp/packages/hardening"
 for deb in "$packages"/*;
 do

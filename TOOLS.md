@@ -79,7 +79,6 @@ Tools present in the Blackbuntu pentesting distribution
 
 #### Exploitation tools
 
-- [thc-ipv6](https://packages.ubuntu.com/focal/thc-ipv6)
 - [websploit](https://packages.ubuntu.com/focal/websploit)
 - [yersinia](https://packages.ubuntu.com/focal/yersinia)
 
@@ -87,7 +86,6 @@ Tools present in the Blackbuntu pentesting distribution
 
 #### Forensics tools
 
-- [capstone-tool](https://packages.ubuntu.com/focal/capstone-tool)
 - [chntpw](https://packages.ubuntu.com/focal/chntpw)
 - [dc3dd](https://packages.ubuntu.com/focal/dc3dd)
 - [extundelete](https://packages.ubuntu.com/focal/extundelete)
@@ -100,7 +98,6 @@ Tools present in the Blackbuntu pentesting distribution
 
 #### Hardening tools
 
-- [android-sdk](https://packages.ubuntu.com/focal/android-sdk)
 - [apktool](https://packages.ubuntu.com/focal/apktool)
 - [arduino](https://packages.ubuntu.com/focal/arduino)
 - [lynis](https://packages.ubuntu.com/focal/lynis)
