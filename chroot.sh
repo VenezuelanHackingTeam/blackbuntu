@@ -71,7 +71,7 @@ apt-get -y clean && apt-get -y autoclean
 
 ## Install live packages
 ## ---------------------
-apt-get -y install casper discover grub2-common grub-common grub-gfxpayload-lists grub-pc grub-pc-bin laptop-detect locales lupin-casper net-tools netplan.io network-manager os-prober resolvconf sudo ubuntu-standard wireless-tools wpagui
+apt-get -y install casper discover grub2-common grub-common grub-gfxpayload-lists grub-pc grub-pc-bin laptop-detect locales lupin-casper net-tools netplan.io network-manager os-prober resolvconf sudo ubuntu-standard wireless-tools
 
 ## Install `kernel`
 ## ----------------
