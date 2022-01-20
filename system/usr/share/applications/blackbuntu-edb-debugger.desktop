@@ -4,5 +4,5 @@ Categories=Reverse Engineering;
 Exec=edb
 Icon=/usr/share/icons/blackbuntu/blackbuntu-edb.png
 Name=EDB Debugger
-Terminal=true
+Terminal=false
 Type=Application

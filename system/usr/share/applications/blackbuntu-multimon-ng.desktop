@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.0
 Categories=Wireless;
-Exec=sh -c 'reaver --help; $SHELL'
+Exec=sh -c 'multimon-ng --help; $SHELL'
 Icon=/usr/share/icons/blackbuntu/blackbuntu-default.png
-Name=Reaver
+Name=Multimon NG
 Terminal=true
 Type=Application

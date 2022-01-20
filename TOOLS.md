@@ -20,17 +20,19 @@ Tools present in the Blackbuntu pentesting distribution
 - [dirmngr](https://packages.ubuntu.com/focal/dirmngr)
 - [dkms](https://packages.ubuntu.com/focal/dkms)
 - [doxygen](https://packages.ubuntu.com/focal/doxygen)
+- [easytag](https://packages.ubuntu.com/focal/easytag)
 - [filezilla](https://packages.ubuntu.com/focal/filezilla)
-- [g++](https://packages.ubuntu.com/focal/g++)
 - [gcc](https://packages.ubuntu.com/focal/gcc)
 - [gconf2](https://packages.ubuntu.com/focal/gconf2)
 - [ghex](https://packages.ubuntu.com/focal/ghex)
+- [g++](https://packages.ubuntu.com/focal/g++)
 - [git](https://packages.ubuntu.com/focal/git)
-- [gnuradio](https://packages.ubuntu.com/focal/gnuradio)
 - [gnuradio-dev](https://packages.ubuntu.com/focal/gnuradio-dev)
+- [gnuradio](https://packages.ubuntu.com/focal/gnuradio)
 - [gpg](https://packages.ubuntu.com/focal/gpg)
 - [gr-osmosdr](https://packages.ubuntu.com/focal/gr-osmosdr)
 - [hexedit](https://packages.ubuntu.com/focal/hexedit)
+- [httrack](https://packages.ubuntu.com/focal/httrack)
 - [jq](https://packages.ubuntu.com/focal/jq)
 - [kate](https://packages.ubuntu.com/focal/kate)
 - [keepassxc](https://packages.ubuntu.com/focal/keepassxc)
@@ -38,12 +40,14 @@ Tools present in the Blackbuntu pentesting distribution
 - [make](https://packages.ubuntu.com/focal/make)
 - [mtools](https://packages.ubuntu.com/focal/mtools)
 - [neofetch](https://packages.ubuntu.com/focal/neofetch)
+- [net-tools](https://packages.ubuntu.com/focal/net-tools)
 - [openvpn](https://packages.ubuntu.com/focal/openvpn)
 - [pidgin](https://packages.ubuntu.com/focal/pidgin)
 - [pkg-config](https://packages.ubuntu.com/focal/pkg-config)
+- [polenum](https://packages.ubuntu.com/focal/polenum)
 - [proxychains](https://packages.ubuntu.com/focal/proxychains)
-- [screen](https://packages.ubuntu.com/focal/screen)
 - [screenfetch](https://packages.ubuntu.com/focal/screenfetch)
+- [screen](https://packages.ubuntu.com/focal/screen)
 - [secure-delete](https://packages.ubuntu.com/focal/secure-delete)
 - [simplescreenrecorder](https://packages.ubuntu.com/focal/simplescreenrecorder)
 - [software-properties-common](https://packages.ubuntu.com/focal/software-properties-common)
@@ -51,9 +55,9 @@ Tools present in the Blackbuntu pentesting distribution
 - [subversion](https://packages.ubuntu.com/focal/subversion)
 - [swig](https://packages.ubuntu.com/focal/swig)
 - [synaptic](https://packages.ubuntu.com/focal/synaptic)
-- [tree](https://packages.ubuntu.com/focal/tree)
-- [tor](https://packages.ubuntu.com/focal/tor)
 - [torbrowser-launcher](https://packages.ubuntu.com/focal/torbrowser-launcher)
+- [tor](https://packages.ubuntu.com/focal/tor)
+- [tree](https://packages.ubuntu.com/focal/tree)
 - [vim](https://packages.ubuntu.com/focal/vim)
 - [wget](https://packages.ubuntu.com/focal/wget)
 - [xorriso](https://packages.ubuntu.com/focal/xorriso)
@@ -66,7 +70,9 @@ Tools present in the Blackbuntu pentesting distribution
 - [brutespray](https://packages.ubuntu.com/focal/brutespray)
 - [cewl](https://packages.ubuntu.com/focal/cewl)
 - [cmospwd](https://packages.ubuntu.com/focal/cmospwd)
+- [crowbar](https://github.com/galkan/crowbar)
 - [crunch](https://packages.ubuntu.com/focal/crunch)
+- [gpp-decrypt](https://blog.carnal0wnage.com/2012/10/group-policy-preferences-and-getting.html)
 - [hashcat](https://packages.ubuntu.com/focal/hashcat)
 - [hydra](https://packages.ubuntu.com/focal/hydra)
 - [john](https://packages.ubuntu.com/focal/john)
@@ -74,11 +80,30 @@ Tools present in the Blackbuntu pentesting distribution
 - [ncrack](https://packages.ubuntu.com/focal/ncrack)
 - [ophcrack](https://packages.ubuntu.com/focal/ophcrack)
 - [patator](https://packages.ubuntu.com/focal/patator)
+- [rainbowcrack](https://project-rainbowcrack.com/)
+- [rsmangler](https://digi.ninja/projects/rsmangler.php)
+- [truecrack](https://github.com/lvaccaro/truecrack)
+
+* * *
+
+#### Crypto tools
+
+- [electrum](https://electrum.org/)
+- [monero](https://www.getmonero.org/)
 
 * * *
 
 #### Exploitation tools
 
+- [burpsuite](https://portswigger.net/burp)
+- [cge](http://www.blackangels.it/)
+- [commix](https://github.com/commixproject/commix)
+- [exe2hex](https://github.com/acjsec/exe2bam)
+- [jexboss](https://github.com/joaomatosf/jexboss)
+- [libenom](https://github.com/Bounteous17/libenom)
+- [routersploit](https://github.com/threat9/routersploit)
+- [sharpmeter](https://github.com/vvalien/SharpMeter/)
+- [shellnoob](https://github.com/reyammer/shellnoob)
 - [websploit](https://packages.ubuntu.com/focal/websploit)
 - [yersinia](https://packages.ubuntu.com/focal/yersinia)
 
@@ -88,11 +113,15 @@ Tools present in the Blackbuntu pentesting distribution
 
 - [chntpw](https://packages.ubuntu.com/focal/chntpw)
 - [dc3dd](https://packages.ubuntu.com/focal/dc3dd)
+- [ddrescue](http://www.garloff.de/kurt/linux/ddrescue/)
+- [dumpzilla](https://www.dumpzilla.org/)
 - [extundelete](https://packages.ubuntu.com/focal/extundelete)
 - [foremost](https://packages.ubuntu.com/focal/foremost)
 - [galleta](https://packages.ubuntu.com/focal/galleta)
 - [guymager](https://packages.ubuntu.com/focal/guymager)
 - [p0f](https://packages.ubuntu.com/focal/p0f)
+- [pdfid](https://blog.didierstevens.com/programs/pdf-tools/)
+- [pdf-parser](https://blog.didierstevens.com/programs/pdf-tools/)
 
 * * *
 
@@ -100,6 +129,7 @@ Tools present in the Blackbuntu pentesting distribution
 
 - [apktool](https://packages.ubuntu.com/focal/apktool)
 - [arduino](https://packages.ubuntu.com/focal/arduino)
+- [dex2jar](https://github.com/pxb1988/dex2jar)
 - [lynis](https://packages.ubuntu.com/focal/lynis)
 
 * * *
@@ -114,12 +144,19 @@ Tools present in the Blackbuntu pentesting distribution
 - [dnsrecon](https://packages.ubuntu.com/focal/dnsrecon)
 - [dnstracer](https://packages.ubuntu.com/focal/dnstracer)
 - [dnswalk](https://packages.ubuntu.com/focal/dnswalk)
+- [enum4linux](https://www.portcullis-security.com/)
+- [fierce](https://github.com/mschwager/fierce)
+- [gnmap](https://github.com/themightyshiv/gnmap)
+- [lbd](http://ge.mine.nu/code/)
+- [linenum](https://github.com/rebootuser/LinEnum)
 - [masscan](https://packages.ubuntu.com/focal/masscan)
 - [nikto](https://packages.ubuntu.com/focal/nikto)
 - [nmap](https://packages.ubuntu.com/focal/nmap)
 - [parsero](https://packages.ubuntu.com/focal/parsero)
+- [phoneinfoga](https://github.com/sundowndev/phoneinfoga)
 - [recon-ng](https://packages.ubuntu.com/focal/recon-ng)
 - [smbmap](https://packages.ubuntu.com/focal/smbmap)
+- [smtp-user-enum](https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum)
 - [sntop](https://packages.ubuntu.com/focal/sntop)
 - [sslsplit](https://packages.ubuntu.com/focal/sslsplit)
 - [traceroute](https://packages.ubuntu.com/focal/traceroute)
@@ -132,13 +169,22 @@ Tools present in the Blackbuntu pentesting distribution
 - [cryptcat](https://packages.ubuntu.com/focal/cryptcat)
 - [dns2tcp](https://packages.ubuntu.com/focal/dns2tcp)
 - [httptunnel](https://packages.ubuntu.com/focal/httptunnel)
+- [cymothoa](http://cymothoa.sourceforge.net/)
+- [netcat](https://packages.ubuntu.com/focal/netcat)
+- [nishang](https://github.com/samratashok/nishang)
+- [powersploit](https://github.com/PowerShellMafia/PowerSploit)
+- [pwnat](http://samy.pl/pwnat/)
+- [reverser](https://github.com/Hood3dRob1n/Reverser)
+- [webshells](https://www.kali.org/tools/webshells/)
 
 * * *
 
 #### Reporting tools
 
+- [cherrytree](https://www.giuspen.com/cherrytree/)
 - [cutycapt](https://packages.ubuntu.com/focal/cutycapt)
 - [dos2unix](https://packages.ubuntu.com/focal/dos2unix)
+- [magictree](https://www.gremwell.com/what_is_magictree)
 
 * * *
 
@@ -148,11 +194,7 @@ Tools present in the Blackbuntu pentesting distribution
 - [valgrind](https://packages.ubuntu.com/focal/valgrind)
 - [yara](https://packages.ubuntu.com/focal/yara)
 
-## Social engineering tools
-
 * * *
-
-- [httrack](https://packages.ubuntu.com/focal/httrack)
 
 ## Sniffing & spoofing tools
 
@@ -160,7 +202,13 @@ Tools present in the Blackbuntu pentesting distribution
 
 - [ettercap-common](https://packages.ubuntu.com/focal/ettercap-common)
 - [ettercap-graphical](https://packages.ubuntu.com/focal/ettercap-graphical)
+- [mitmdump](https://mitmproxy.org/)
+- [mitmproxy](https://mitmproxy.org/)
+- [mitmweb](https://mitmproxy.org/)
+- [sniffjoke](https://github.com/vecna/sniffjoke)
+- [webscarab](http://dawes.za.net/rogan/webscarab/)
 - [wireshark](https://packages.ubuntu.com/focal/wireshark)
+- [zaproxy](https://www.zaproxy.org/)
 
 * * *
 
@@ -168,19 +216,24 @@ Tools present in the Blackbuntu pentesting distribution
 
 - [dhcpig](https://packages.ubuntu.com/focal/dhcpig)
 - [hping3](https://packages.ubuntu.com/focal/hping3)
+- [iaxflood](http://www.hackingexposedvoip.com/sec_tools.html)
+- [inviteflood](http://www.hackingexposedvoip.com/sec_tools.html)
 - [mdk3](https://packages.ubuntu.com/focal/mdk3)
+- [rtpflood](http://www.hackingexposedvoip.com/sec_tools.html)
 - [slowhttptest](https://packages.ubuntu.com/focal/slowhttptest)
 - [t50](https://packages.ubuntu.com/focal/t50)
 - [termineter](https://packages.ubuntu.com/focal/termineter)
+- [thc-ssl-dos](https://www.thc.org/thc-ssl-dos/)
+- [udpflood](http://www.hackingexposedvoip.com/sec_tools.html)
 
 * * *
 
 #### Utilities tools
 
-- [easytag](https://packages.ubuntu.com/focal/easytag)
-- [netcat](https://packages.ubuntu.com/focal/netcat)
-- [net-tools](https://packages.ubuntu.com/focal/net-tools)
-- [polenum](https://packages.ubuntu.com/focal/polenum)
+- [dracnmap](https://github.com/screetsec/Dracnmap)
+- [ridenum](https://github.com/trustedsec/ridenum)
+- [subbrute](https://github.com/TheRook/subbrute)
+- [webtrace](https://neoslab.com)
 
 * * *
 
@@ -193,8 +246,11 @@ Tools present in the Blackbuntu pentesting distribution
 
 #### Web applications tools
 
+- [cmsmap](https://github.com/Dionach/CMSmap)
 - [dirb](https://packages.ubuntu.com/focal/dirb)
+- [dirbuster](https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project)
 - [gobuster](https://packages.ubuntu.com/focal/gobuster)
+- [hurl](https://github.com/fnord0/hURL)
 - [wfuzz](https://packages.ubuntu.com/focal/wfuzz)
 - [whatweb](https://packages.ubuntu.com/focal/whatweb)
 
@@ -203,12 +259,15 @@ Tools present in the Blackbuntu pentesting distribution
 #### Wireless tools
 
 - [aircrack-ng](https://packages.ubuntu.com/focal/aircrack-ng)
-- [airgraph-ng](https://packages.ubuntu.com/focal/airgraph-ng)
+- [blueranger](http://www.hackfromacave.com/projects/blueranger.html)
 - [cowpatty](https://packages.ubuntu.com/focal/cowpatty)
+- [fluxion](https://github.com/FluxionNetwork/fluxion)
 - [kismet](https://packages.ubuntu.com/focal/kismet)
 - [mfcuk](https://packages.ubuntu.com/focal/mfcuk)
 - [mfoc](https://packages.ubuntu.com/focal/mfoc)
 - [multimon-ng](https://packages.ubuntu.com/focal/multimon-ng)
 - [pixiewps](https://packages.ubuntu.com/focal/pixiewps)
 - [reaver](https://packages.ubuntu.com/focal/reaver)
+- [wifi-honey](https://www.digininja.org/projects/wifi_honey.php7)
 - [wifite](https://packages.ubuntu.com/focal/wifite)
+- [wps-breaker](https://github.com/SilentGhostX/HT-WPS-Breaker)

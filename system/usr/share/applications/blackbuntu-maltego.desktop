@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Categories=Information Gathering;
+Exec=/usr/bin/maltego
+Icon=/usr/share/icons/blackbuntu/blackbuntu-maltego.png
+Name=Maltego
+Terminal=false
+Type=Application

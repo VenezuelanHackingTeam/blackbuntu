@@ -111,7 +111,7 @@ apt-get -y install gnome-firmware gnome-tweak-tool
 
 ## Install system libraries
 ## ------------------------
-apt-get -y install libbz2-dev libcppunit-dev libcurl4-openssl-dev libffi-dev libgdbm-dev libglib2.0-dev libglib2.0-dev-bin libgmp-dev liblog4cpp5-dev libncurses5-dev libnss3-dev liborc-0.4-dev libosmocore-dev libreadline-dev libsqlite3-dev libssl-dev libtool libxml2 libxml2-dev libxslt1-dev zlib1g-dev
+apt-get -y install libbz2-dev libcppunit-dev libcurl4-openssl-dev libffi-dev libfmt-dev libgdbm-dev libglib2.0-dev libglib2.0-dev-bin libgmp-dev libgspell-1-dev libgtkmm-3.0-dev libgtksourceviewmm-3.0-dev liblog4cpp5-dev libncurses5-dev libnss3-dev liborc-0.4-dev libosmocore-dev libreadline-dev libspdlog-dev libsqlite3-dev libssl-dev libtool libuchardet-dev libxml2 libxml++2.6-dev libxml2-dev libxslt1-dev zlib1g-dev
 
 ## Install `python`
 ## ----------------
@@ -127,7 +127,7 @@ apt-get -y install apt-transport-https apt-utils
 
 ## Install common packages
 ## -----------------------
-apt-get -y install apache2 asciinema autoconf autopsy binutils binwalk build-essential cmake curl debootstrap default-jre dirmngr dkms doxygen filezilla g++ gcc gconf2 ghex git gnuradio gnuradio-dev gpg gr-osmosdr hexedit jq kate keepassxc macchanger make mtools neofetch openvpn pidgin pkg-config proxychains screen screenfetch secure-delete simplescreenrecorder software-properties-common squashfs-tools subversion swig synaptic tree tor torbrowser-launcher vim wget xorriso
+apt-get -y install apache2 asciinema autoconf autopsy binutils binwalk build-essential cmake curl debootstrap default-jre dirmngr dkms doxygen easytag filezilla g++ gcc gconf2 gettext ghex git gnuradio gnuradio-dev gpg gr-osmosdr hexedit httrack jq kate keepassxc macchanger make mtools neofetch net-tools ninja-build openvpn pidgin pkg-config proxychains screen screenfetch secure-delete simplescreenrecorder software-properties-common squashfs-tools subversion swig synaptic tree tor torbrowser-launcher vim wget xorriso
 
 ## Install files roller
 ## --------------------
@@ -151,7 +151,7 @@ apt-get -y clean && apt-get -y autoclean
 ## Create folders tree
 ## --------------------
 mkdir -p /opt/blackbuntu
-mkdir -p /opt/blackbuntu/{cracking,crypto,exploitation,forensics,hardening,information-gathering,networking,reporting,reverse-engineering,sniffing-spoofing,social-engineering,stress-testing,utilities,vulnerability-analysis,web-applications,wireless}
+mkdir -p /opt/blackbuntu/{cracking,crypto,exploitation,forensics,hardening,information-gathering,networking,reporting,reverse-engineering,sniffing-spoofing,stress-testing,utilities,vulnerability-analysis,web-applications,wireless}
 
 ## Install cracking tools
 ## -----------------------
@@ -215,7 +215,7 @@ done
 
 ## Install networking tools
 ## -----------------------
-apt-get -y install cryptcat dns2tcp httptunnel
+apt-get -y install cryptcat dns2tcp httptunnel netcat
 packages="/tmp/packages/networking"
 for deb in "$packages"/*;
 do
@@ -241,18 +241,6 @@ done
 ## ---------------------------------
 apt-get -y install edb-debugger valgrind yara
 packages="/tmp/packages/reverse-engineering"
-for deb in "$packages"/*;
-do
-    if test -f "$deb";
-    then
-        dpkg -i $deb
-    fi
-done
-
-## Install social engineering tools
-## --------------------------------
-apt-get -y install httrack
-packages="/tmp/packages/social-engineering"
 for deb in "$packages"/*;
 do
     if test -f "$deb";
@@ -287,7 +275,7 @@ done
 
 ## Install utilities tools
 ## -----------------------
-apt-get -y install easytag netcat net-tools polenum
+apt-get -y install polenum
 packages="/tmp/packages/utilities"
 for deb in "$packages"/*;
 do
@@ -323,7 +311,7 @@ done
 
 ## Install wireless tools
 ## ----------------------
-apt-get -y install aircrack-ng airgraph-ng cowpatty kismet mfcuk mfoc multimon-ng pixiewps reaver wifite
+apt-get -y install aircrack-ng cowpatty kismet mfcuk mfoc multimon-ng pixiewps reaver wifite
 packages="/tmp/packages/wireless"
 for deb in "$packages"/*;
 do
@@ -415,9 +403,9 @@ cp /tmp/system/root/bashrc /root/.bashrc
 
 ## Replace `dconf`
 ## --------------
-mkdir -p /etc/skel/.config
-rm -rf /etc/skel/.config/dconf
-cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
+#mkdir -p /etc/skel/.config
+#rm -rf /etc/skel/.config/dconf
+#cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
 
 ## Configure backgrounds
 ## ---------------------

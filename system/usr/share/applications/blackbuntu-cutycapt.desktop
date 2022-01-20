@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.0
-Categories=Wireless;
-Exec=sh -c 'reaver --help; $SHELL'
+Categories=Utilities;
+Exec=sh -c 'polenum --help; $SHELL'
 Icon=/usr/share/icons/blackbuntu/blackbuntu-default.png
-Name=Reaver
+Name=Polenum
 Terminal=true
 Type=Application

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Categories=Web Applications;
+Exec=sh -c 'whatweb --help; $SHELL'
+Icon=/usr/share/icons/blackbuntu/blackbuntu-wpscan.png
+Name=WhatWeb
+Terminal=true
+Type=Application

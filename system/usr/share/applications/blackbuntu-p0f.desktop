@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.0
-Categories=Information Gathering;
+Categories=Forensics;
 Exec=sh -c 'sudo p0f; $SHELL'
 Icon=/usr/share/icons/blackbuntu/blackbuntu-default.png
-Name=P0f Framework
+Name=P0f
 Terminal=true
 Type=Application
