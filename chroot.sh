@@ -391,9 +391,9 @@ cp /tmp/system/root/bashrc /root/.bashrc
 
 ## Replace `dconf`
 ## --------------
-#mkdir -p /etc/skel/.config
-#rm -rf /etc/skel/.config/dconf
-#cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
+mkdir -p /etc/skel/.config
+rm -rf /etc/skel/.config/dconf
+cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
 
 ## Configure backgrounds
 ## ---------------------
@@ -428,11 +428,11 @@ cp /tmp/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymou
 
 ## Update `initframs`
 ## ------------------
-#update-initramfs -u
+update-initramfs -u
 
 ## Update `grub`
 ## -------------
-#update-grub
+update-grub
 
 ## Import icons
 ## ------------
