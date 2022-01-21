@@ -151,7 +151,7 @@ apt-get -y clean && apt-get -y autoclean
 ## Create folders tree
 ## --------------------
 mkdir -p /opt/blackbuntu
-mkdir -p /opt/blackbuntu/{cracking,crypto,exploitation,forensics,hardening,information-gathering,networking,reporting,reverse-engineering,sniffing-spoofing,stress-testing,utilities,vulnerability-analysis,web-applications,wireless}
+mkdir -p /opt/blackbuntu/{cracking,crypto,exploitation,forensics,hardening,information-gathering,networking,reverse-engineering,sniffing-spoofing,stress-testing,utilities,vulnerability-analysis,web-applications,wireless}
 
 ## Install cracking tools
 ## -----------------------
@@ -217,18 +217,6 @@ done
 ## -----------------------
 apt-get -y install cryptcat dns2tcp httptunnel netcat
 packages="/tmp/packages/networking"
-for deb in "$packages"/*;
-do
-    if test -f "$deb";
-    then
-        dpkg -i $deb
-    fi
-done
-
-## Install reporting tools
-## -----------------------
-apt-get -y install cutycapt dos2unix
-packages="/tmp/packages/reporting"
 for deb in "$packages"/*;
 do
     if test -f "$deb";

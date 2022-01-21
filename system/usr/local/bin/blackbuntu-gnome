@@ -39,7 +39,7 @@ gsettings set org.gnome.shell favorite-apps "['org.gnome.Terminal.desktop', 'org
 
 ## Create Apps Folders
 ## -------------------
-gsettings set org.gnome.desktop.app-folders folder-children "['cracking', 'crypto', 'exploitation', 'forensics', 'hardening', 'information-gathering', 'networking', 'reporting', 'reverse-engineering', 'sniffing-spoofing', 'stress-testing', 'utilities', 'vulnerability-analysis', 'web-applications', 'wireless']"
+gsettings set org.gnome.desktop.app-folders folder-children "['cracking', 'crypto', 'exploitation', 'forensics', 'hardening', 'information-gathering', 'networking', 'reverse-engineering', 'sniffing-spoofing', 'stress-testing', 'utilities', 'vulnerability-analysis', 'web-applications', 'wireless']"
 
 ## Configure Gnome Dash
 ## --------------------
@@ -57,19 +57,17 @@ gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folder
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/information-gathering/ categories "['Information Gathering']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/networking/ name "07 - Networking"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/networking/ categories "['Networking']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reporting/ name "08 - Reporting"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reporting/ categories "['Reporting']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reverse-engineering/ name "09 - Reverse Engineering"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reverse-engineering/ name "08 - Reverse Engineering"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/reverse-engineering/ categories "['Reverse Engineering']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/sniffing-spoofing/ name "10 - Sniffing - Spoofing"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/sniffing-spoofing/ name "09 - Sniffing - Spoofing"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/sniffing-spoofing/ categories "['Sniffing - Spoofing']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/stress-testing/ name "11 - Stress Testing"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/stress-testing/ name "10 - Stress Testing"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/stress-testing/ categories "['Stress Testing']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/utilities/ name "12 - Utilities"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/utilities/ name "11 - Utilities"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/utilities/ categories "['Utilities']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/vulnerability-analysis/ name "13 - Vulnerability Analysis"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/vulnerability-analysis/ name "12 - Vulnerability Analysis"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/vulnerability-analysis/ categories "['Vulnerability Analysis']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/web-applications/ name "14 - Web Applications"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/web-applications/ name "13 - Web Applications"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/web-applications/ categories "['Web Applications']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/wireless/ name "15 - Wireless"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/wireless/ name "14 - Wireless"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/wireless/ categories "['Wireless']"
