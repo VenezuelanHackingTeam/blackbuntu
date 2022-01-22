@@ -222,8 +222,6 @@ Libraries and tools present in the Blackbuntu pentesting distribution
 
 ## Sniffing & spoofing tools
 
-* * *
-
 - [ettercap-common](https://packages.ubuntu.com/focal/ettercap-common)
 - [ettercap-graphical](https://packages.ubuntu.com/focal/ettercap-graphical)
 - [mitmdump](https://mitmproxy.org/)
@@ -241,7 +239,6 @@ Libraries and tools present in the Blackbuntu pentesting distribution
 - [dhcpig](https://packages.ubuntu.com/focal/dhcpig)
 - [hping3](https://packages.ubuntu.com/focal/hping3)
 - [iaxflood](http://www.hackingexposedvoip.com/sec_tools.html)
-- [inviteflood](http://www.hackingexposedvoip.com/sec_tools.html)
 - [mdk3](https://packages.ubuntu.com/focal/mdk3)
 - [rtpflood](http://www.hackingexposedvoip.com/sec_tools.html)
 - [slowhttptest](https://packages.ubuntu.com/focal/slowhttptest)
