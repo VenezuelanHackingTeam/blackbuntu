@@ -225,12 +225,10 @@ function gendebpack()
 function chrootenv()
 {
 	sudo ln -f $path_script/chroot.sh diskbase/root/chroot.sh
-    sudo ln -f $path_script/build.conf diskbase/root/build.conf
     sudo cp -r $path_script/system diskbase/tmp/
     sudo cp -r $path_script/packages diskbase/tmp/
     sudo chroot diskbase /root/chroot.sh -
     sudo rm -f diskbase/root/chroot.sh
-    sudo rm -f diskbase/root/build.conf
 }
 
 ## Build ISO image

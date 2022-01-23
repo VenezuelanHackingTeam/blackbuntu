@@ -6,8 +6,6 @@
 
 ## Export environment
 ## ------------------
-export HOME=/root
-export LC_ALL=C
 export PYTHONWARNINGS=ignore
 
 ## Configure APT sources
@@ -17,31 +15,9 @@ add-apt-repository -y restricted
 add-apt-repository -y universe
 add-apt-repository -y multiverse
 
-## Set hostname
-## ------------
-echo "blackbuntu" > /etc/hostname
-
 ## Move to temp directory
 ## ----------------------
 cd /tmp/
-
-## Update cache repository
-## -----------------------
-apt-get -y update
-
-## Install `systemd`
-## -----------------
-apt-get -y install libterm-readline-gnu-perl systemd-sysv
-
-## Configure `machine-id`
-## ----------------------
-dbus-uuidgen > /etc/machine-id
-ln -fs /etc/machine-id /var/lib/dbus/machine-id
-
-## Configure `diversion`
-## ---------------------
-dpkg-divert --local --rename --add /sbin/initctl
-ln -s /bin/true /sbin/initctl
 
 ## Keep system safe
 ## ----------------
@@ -49,21 +25,9 @@ apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
 apt-get -y remove && apt-get -y autoremove
 apt-get -y clean && apt-get -y autoclean
 
-## Install live packages
-## ---------------------
-apt-get -y install casper discover grub2-common grub-common grub-gfxpayload-lists grub-pc grub-pc-bin laptop-detect locales lupin-casper net-tools netplan.io network-manager os-prober resolvconf sudo ubuntu-standard wireless-tools
-
 ## Install `kernel`
 ## ----------------
 apt-get -y install linux-generic
-
-## Install `ubiquity`
-## ------------------
-apt-get -y install ubiquity ubiquity-casper ubiquity-frontend-gtk ubiquity-slideshow-ubuntu ubiquity-ubuntu-artwork
-
-## Install `plymouth` and `desktop`
-## -------------------------------
-apt-get -y install plymouth-theme-ubuntu-logo ubuntu-gnome-desktop ubuntu-gnome-wallpapers
 
 ## Install `dejavu` font
 ## ---------------------
@@ -127,6 +91,14 @@ apt-get -y update && apt-get -y install shutter
 apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
 apt-get -y remove && apt-get -y autoremove
 apt-get -y clean && apt-get -y autoclean
+
+## Clone `system` repository
+## -------------------------
+git clone https://github.com/neoslab/blackbuntu
+
+## Clone `packages` repository
+## ----------------------------
+git clone https://github.com/neoslab/packages
 
 ## Create folders tree
 ## --------------------
@@ -327,28 +299,6 @@ chmod +x /opt/blackbuntu/crypto/monero/monero-wallet-gui
 ## ------------------
 gem install wpscan
 
-## ----------------- ##
-## CONFIGURE NETWORK ##
-## ----------------- ##
-
-## Configure `network manager`
-## --------------------------
-cat <<EOF > /etc/NetworkManager/NetworkManager.conf
-[main]
-rc-manager=resolvconf
-plugins=ifupdown,keyfile
-dns=dnsmasq
-
-[ifupdown]
-managed=false
-EOF
-
-## DPKG Reconfigure
-## ----------------
-dpkg-reconfigure locales
-dpkg-reconfigure resolvconf
-dpkg-reconfigure network-manager
-
 ## ---------------- ##
 ## CONFIGURE SYSTEM ##
 ## ---------------- ##
@@ -362,61 +312,49 @@ apt-get -y clean && apt-get -y autoclean
 ## Setup user `bashrc`
 ## -------------------
 rm -f /etc/skel/.bashrc
-cp /tmp/system/etc/skel/bashrc /etc/skel/.bashrc
+cp /tmp/blackbuntu/system/etc/skel/bashrc /etc/skel/.bashrc
 
 ## Setup root `bashrc`
 ## -------------------
 rm -f /root/.bashrc
-cp /tmp/system/root/bashrc /root/.bashrc
+cp /tmp/blackbuntu/system/root/bashrc /root/.bashrc
 
 ## Replace `dconf`
 ## --------------
 mkdir -p /etc/skel/.config
 rm -rf /etc/skel/.config/dconf
-cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
+cp -r /tmp/blackbuntu/system/etc/skel/config/dconf /etc/skel/.config/
 
 ## Configure backgrounds
 ## ---------------------
 rm -rf /usr/share/backgrounds/*
-cp /tmp/system/usr/share/backgrounds/* /usr/share/backgrounds/
+cp /tmp/blackbuntu/system/usr/share/backgrounds/* /usr/share/backgrounds/
 rm -f /usr/share/gnome-background-properties/*
-cp /tmp/system/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
+cp /tmp/blackbuntu/system/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
 
 ## Configure utilities
 ## -------------------
-cp /tmp/system/usr/local/bin/* /usr/local/bin/
+cp /tmp/blackbuntu/system/usr/local/bin/* /usr/local/bin/
 chmod +x /usr/local/bin/blackbuntu-*
-
-## Replace `casper.conf`
-## --------------------
-rm -f /etc/casper.conf
-cp /tmp/system/etc/casper.conf /etc/
-
-## Replace `os-release`
-## --------------------
-rm -f /etc/os-release
-rm -f /usr/lib/os-release
-cp /tmp/system/usr/lib/os-release /usr/lib/
-ln -s /usr/lib/os-release /etc/os-release
 
 ## Replace `pixmaps`
 ## ----------------
 rm -f /usr/share/ubiquity/pixmaps/cd_in_tray.png
 rm -f /usr/share/ubiquity/pixmaps/ubuntu_installed.png
-cp /tmp/system/usr/share/ubiquity/pixmaps/cd_in_tray.png /usr/share/ubiquity/pixmaps/
-cp /tmp/system/usr/share/ubiquity/pixmaps/ubuntu_installed.png /usr/share/ubiquity/pixmaps/
+cp /tmp/blackbuntu/system/usr/share/ubiquity/pixmaps/cd_in_tray.png /usr/share/ubiquity/pixmaps/
+cp /tmp/blackbuntu/system/usr/share/ubiquity/pixmaps/ubuntu_installed.png /usr/share/ubiquity/pixmaps/
 
 ## Replace `ubiquity-slideshow`
 ## ---------------------------
 rm -rf /usr/share/ubiquity-slideshow
-cp -r /tmp/system/usr/share/ubiquity-slideshow /usr/share/
+cp -r /tmp/blackbuntu/system/usr/share/ubiquity-slideshow /usr/share/
 
 ## Configure `plymouth`
 ## --------------------
 rm -f /usr/share/plymouth/ubuntu-logo.png
-cp /tmp/system/usr/share/plymouth/ubuntu-logo.png /usr/share/plymouth/
+cp /tmp/blackbuntu/system/usr/share/plymouth/ubuntu-logo.png /usr/share/plymouth/
 rm -f /usr/share/plymouth/themes/spinner/watermark.png
-cp /tmp/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/
+cp /tmp/blackbuntu/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/
 
 ## Update `initframs`
 ## ------------------
@@ -424,11 +362,11 @@ update-initramfs -u
 
 ## Import icons
 ## ------------
-cp -r /tmp/system/usr/share/icons/* /usr/share/icons/
+cp -r /tmp/blackbuntu/system/usr/share/icons/* /usr/share/icons/
 
 ## Import applications desktop
 ## ---------------------------
-cp /tmp/system/usr/share/applications/* /usr/share/applications/
+cp /tmp/blackbuntu/system/usr/share/applications/* /usr/share/applications/
 
 ## Edit system conf
 ## ----------------
@@ -454,15 +392,6 @@ rm -f /usr/share/applications/wireshark.desktop
 ## Configure `gdm`
 ## ---------------
 blackbuntu-gdm
-
-## Truncate `machine-id`
-## ---------------------
-truncate -s 0 /etc/machine-id
-
-## Remove `diversion`
-## ------------------
-rm /sbin/initctl
-dpkg-divert --rename --remove /sbin/initctl
 
 ## Clean `tmp` directory
 ## ---------------------
