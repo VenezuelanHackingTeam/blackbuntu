@@ -1,67 +1,23 @@
 #!/bin/bash
 
-## ---------------- ##
-## Define Variables ##
-## ---------------- ##
-
-## Path directory
-## --------------
-path_script="$(dirname "$(readlink -f "$0")")"
-
-## Path settings file
-## ------------------
-path_config="$path_script/build.conf"
-
-## Load configuration file
-## -----------------------
-source "$path_config"
-
 ## -------------- ##
 ## INSTALL SYSTEM ##
 ## -------------- ##
 
 ## Export environment
 ## ------------------
-export HOME=/root
-export LC_ALL=C
 export PYTHONWARNINGS=ignore
 
 ## Configure APT sources
 ## ---------------------
-cat <<EOF > /etc/apt/sources.list
-deb $target_ubuntu_mirror focal main restricted universe multiverse
-deb-src $target_ubuntu_mirror focal main restricted universe multiverse
-deb $target_ubuntu_mirror focal-security main restricted universe multiverse
-deb-src $target_ubuntu_mirror focal-security main restricted universe multiverse
-deb $target_ubuntu_mirror focal-updates main restricted universe multiverse
-deb-src $target_ubuntu_mirror focal-updates main restricted universe multiverse
-EOF
-
-## Set hostname
-## ------------
-echo "blackbuntu" > /etc/hostname
+add-apt-repository -y main
+add-apt-repository -y restricted
+add-apt-repository -y universe
+add-apt-repository -y multiverse
 
 ## Move to temp directory
 ## ----------------------
 cd /tmp/
-
-## Update cache repository
-## -----------------------
-apt-get -y update
-
-## Install `systemd`
-## -----------------
-apt-get -y install libterm-readline-gnu-perl systemd-sysv
-
-## Configure `machine-id`
-## ----------------------
-dbus-uuidgen > /etc/machine-id
-ln -fs /etc/machine-id /var/lib/dbus/machine-id
-
-## Configure `diversion`
-## ---------------------
-dpkg-divert --local --rename --add /sbin/initctl
-ln -s /bin/true /sbin/initctl
 
 ## Keep system safe
 ## ----------------
@@ -69,21 +25,9 @@ apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
 apt-get -y remove && apt-get -y autoremove
 apt-get -y clean && apt-get -y autoclean
 
-## Install live packages
-## ---------------------
-apt-get -y install casper discover grub2-common grub-common grub-gfxpayload-lists grub-pc grub-pc-bin laptop-detect locales lupin-casper net-tools netplan.io network-manager os-prober resolvconf sudo ubuntu-standard wireless-tools
-
 ## Install `kernel`
 ## ----------------
 apt-get -y install linux-generic
-
-## Install `ubiquity`
-## ------------------
-apt-get -y install ubiquity ubiquity-casper ubiquity-frontend-gtk ubiquity-slideshow-ubuntu ubiquity-ubuntu-artwork
-
-## Install `plymouth` and `desktop`
-## -------------------------------
-apt-get -y install plymouth-theme-ubuntu-logo ubuntu-gnome-desktop ubuntu-gnome-wallpapers
 
 ## Install `dejavu` font
 ## ---------------------
@@ -152,6 +96,29 @@ apt-get -y clean && apt-get -y autoclean
 ## --------------------
 mkdir -p /opt/blackbuntu
 mkdir -p /opt/blackbuntu/{cracking,crypto,exploitation,forensics,hardening,information-gathering,networking,reverse-engineering,sniffing-spoofing,stress-testing,utilities,vulnerability-analysis,web-applications,wireless}
+
+## Clone system
+## ------------
+cd /tmp/
+git clone https://github.com/neoslab/system
+
+## Clone packages
+## --------------
+git clone https://github.com/neoslab/packages
+
+## Generate DEB packages
+## ---------------------
+basetree="/tmp/packages"
+for basedir in "$basetree"/*;
+do
+	for deb in "$basedir"/*;
+	do
+		if test -d "$deb";
+		then
+	        dpkg-deb --build --root-owner-group $deb
+	    fi
+	done
+done
 
 ## Install cracking tools
 ## -----------------------
@@ -347,28 +314,6 @@ chmod +x /opt/blackbuntu/crypto/monero/monero-wallet-gui
 ## ------------------
 gem install wpscan
 
-## ----------------- ##
-## CONFIGURE NETWORK ##
-## ----------------- ##
-
-## Configure `network manager`
-## --------------------------
-cat <<EOF > /etc/NetworkManager/NetworkManager.conf
-[main]
-rc-manager=resolvconf
-plugins=ifupdown,keyfile
-dns=dnsmasq
-
-[ifupdown]
-managed=false
-EOF
-
-## DPKG Reconfigure
-## ----------------
-dpkg-reconfigure locales
-dpkg-reconfigure resolvconf
-dpkg-reconfigure network-manager
-
 ## ---------------- ##
 ## CONFIGURE SYSTEM ##
 ## ---------------- ##
@@ -407,18 +352,6 @@ cp /tmp/system/usr/share/gnome-background-properties/* /usr/share/gnome-backgrou
 cp /tmp/system/usr/local/bin/* /usr/local/bin/
 chmod +x /usr/local/bin/blackbuntu-*
 
-## Replace `casper.conf`
-## --------------------
-rm -f /etc/casper.conf
-cp /tmp/system/etc/casper.conf /etc/
-
-## Replace `os-release`
-## --------------------
-rm -f /etc/os-release
-rm -f /usr/lib/os-release
-cp /tmp/system/usr/lib/os-release /usr/lib/
-ln -s /usr/lib/os-release /etc/os-release
-
 ## Replace `pixmaps`
 ## ----------------
 rm -f /usr/share/ubiquity/pixmaps/cd_in_tray.png
@@ -440,11 +373,7 @@ cp /tmp/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymou
 
 ## Update `initframs`
 ## ------------------
-#update-initramfs -u
-
-## Update `grub`
-## -------------
-#update-grub
+update-initramfs -u
 
 ## Import icons
 ## ------------
@@ -478,15 +407,6 @@ rm -f /usr/share/applications/wireshark.desktop
 ## Configure `gdm`
 ## ---------------
 blackbuntu-gdm
-
-## Truncate `machine-id`
-## ---------------------
-truncate -s 0 /etc/machine-id
-
-## Remove `diversion`
-## ------------------
-rm /sbin/initctl
-dpkg-divert --rename --remove /sbin/initctl
 
 ## Clean `tmp` directory
 ## ---------------------
