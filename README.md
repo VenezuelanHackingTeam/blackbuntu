@@ -2,6 +2,16 @@
 
 Official repository of the Blackbuntu pentesting distribution. Based on Ubuntu 20.04.3 LTS, the current version of Blackbuntu can be downloaded here.
 
+| Value | Description |
+| --- | --- |
+| Custom Disk | blackbuntu-20.04.3-lts-amd64.iso |
+| Size | 5,43 GiB (5 833 293 824 bytes) |
+| Checksum | b9a8a8b574dda8df4d838332e27c66db |
+| checksum File | blackbuntu-20.04.3-lts-amd64.md5 |
+| Version | 20.04.3 |
+| Volume ID | Blackbuntu 20.04.3 LTS amd64 | |
+| Release | Focal Fossa |
+| Disk Name | Blackbuntu 20.04.3 LTS amd64 "Focal Fossa" |
 * * *
 
 #### Installation
