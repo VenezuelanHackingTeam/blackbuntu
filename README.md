@@ -1,12 +1,18 @@
 ### Blackbuntu
 
-Official repository of the Blackbuntu pentesting distribution.
+Official repository of the Blackbuntu pentesting distribution. Based on Ubuntu 20.04.3 LTS, the current version of Blackbuntu is `[blackbuntu-20.04.3-lts-amd64.iso]()`.
+
+* * *
+
+#### Installation
+
+The installation of **Blackbuntu** as primary operating system is recommended for advanced users only. To test Blackbuntu we suggest instead to use [Virtualbox](https://www.virtualbox.org/) with 4096 Mo of memory and 160 Go of VDI disk space.
 
 * * *
 
 #### Tools
 
-Currently Blackbuntu includes [212 pre-installed libraries and tools](https://github.com/neoslab/blackbuntu/blob/main/TOOLS.md) dedicated to ethical hacking and pentesting.
+Currently Blackbuntu includes [208 pre-installed libraries and tools](https://github.com/neoslab/blackbuntu/blob/main/TOOLS.md) dedicated to ethical hacking, pentesting and cybersecurity.
 
 * * *
 

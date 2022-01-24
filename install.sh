@@ -15,10 +15,6 @@ add-apt-repository -y restricted
 add-apt-repository -y universe
 add-apt-repository -y multiverse
 
-## Remove `zsys`
-## -------------
-apt-get -y purge --auto-remove zsys >/dev/null 2>&1
-
 ## Move to temp directory
 ## ----------------------
 cd /tmp/
@@ -330,49 +326,49 @@ apt-get -y clean && apt-get -y autoclean
 ## Setup user `bashrc`
 ## -------------------
 rm -f /etc/skel/.bashrc
-cp /tmp/blackbuntu/system/etc/skel/bashrc /etc/skel/.bashrc
+cp /tmp/system/etc/skel/bashrc /etc/skel/.bashrc
 
 ## Setup root `bashrc`
 ## -------------------
 rm -f /root/.bashrc
-cp /tmp/blackbuntu/system/root/bashrc /root/.bashrc
+cp /tmp/system/root/bashrc /root/.bashrc
 
 ## Replace `dconf`
 ## --------------
 mkdir -p /etc/skel/.config
 rm -rf /etc/skel/.config/dconf
-cp -r /tmp/blackbuntu/system/etc/skel/config/dconf /etc/skel/.config/
+cp -r /tmp/system/etc/skel/config/dconf /etc/skel/.config/
 
 ## Configure backgrounds
 ## ---------------------
 rm -rf /usr/share/backgrounds/*
-cp /tmp/blackbuntu/system/usr/share/backgrounds/* /usr/share/backgrounds/
+cp /tmp/system/usr/share/backgrounds/* /usr/share/backgrounds/
 rm -f /usr/share/gnome-background-properties/*
-cp /tmp/blackbuntu/system/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
+cp /tmp/system/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
 
 ## Configure utilities
 ## -------------------
-cp /tmp/blackbuntu/system/usr/local/bin/* /usr/local/bin/
+cp /tmp/system/usr/local/bin/* /usr/local/bin/
 chmod +x /usr/local/bin/blackbuntu-*
 
 ## Replace `pixmaps`
 ## ----------------
 rm -f /usr/share/ubiquity/pixmaps/cd_in_tray.png
 rm -f /usr/share/ubiquity/pixmaps/ubuntu_installed.png
-cp /tmp/blackbuntu/system/usr/share/ubiquity/pixmaps/cd_in_tray.png /usr/share/ubiquity/pixmaps/
-cp /tmp/blackbuntu/system/usr/share/ubiquity/pixmaps/ubuntu_installed.png /usr/share/ubiquity/pixmaps/
+cp /tmp/system/usr/share/ubiquity/pixmaps/cd_in_tray.png /usr/share/ubiquity/pixmaps/
+cp /tmp/system/usr/share/ubiquity/pixmaps/ubuntu_installed.png /usr/share/ubiquity/pixmaps/
 
 ## Replace `ubiquity-slideshow`
 ## ---------------------------
 rm -rf /usr/share/ubiquity-slideshow
-cp -r /tmp/blackbuntu/system/usr/share/ubiquity-slideshow /usr/share/
+cp -r /tmp/system/usr/share/ubiquity-slideshow /usr/share/
 
 ## Configure `plymouth`
 ## --------------------
 rm -f /usr/share/plymouth/ubuntu-logo.png
-cp /tmp/blackbuntu/system/usr/share/plymouth/ubuntu-logo.png /usr/share/plymouth/
+cp /tmp/system/usr/share/plymouth/ubuntu-logo.png /usr/share/plymouth/
 rm -f /usr/share/plymouth/themes/spinner/watermark.png
-cp /tmp/blackbuntu/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/
+cp /tmp/system/usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/
 
 ## Update `initframs`
 ## ------------------
@@ -380,11 +376,11 @@ update-initramfs -u
 
 ## Import icons
 ## ------------
-cp -r /tmp/blackbuntu/system/usr/share/icons/* /usr/share/icons/
+cp -r /tmp/system/usr/share/icons/* /usr/share/icons/
 
 ## Import applications desktop
 ## ---------------------------
-cp /tmp/blackbuntu/system/usr/share/applications/* /usr/share/applications/
+cp /tmp/system/usr/share/applications/* /usr/share/applications/
 
 ## Edit system conf
 ## ----------------
