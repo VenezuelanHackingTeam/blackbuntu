@@ -1,6 +1,6 @@
 ### Blackbuntu
 
-Official repository of the Blackbuntu pentesting distribution. Based on Ubuntu 20.04.3 LTS, the current version of Blackbuntu is `[blackbuntu-20.04.3-lts-amd64.iso]()`.
+Official repository of the Blackbuntu pentesting distribution. Based on Ubuntu 20.04.3 LTS, the current version of Blackbuntu can be downloaded here.
 
 * * *
 
