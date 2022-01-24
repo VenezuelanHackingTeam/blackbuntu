@@ -1,6 +1,12 @@
 ### Blackbuntu
 
-Official repository of the Blackbuntu pentesting distribution. The current version of Blackbuntu is based on Ubuntu 20.04.3 LTS. More information about the current release and download link can be found below.
+Official repository of the Blackbuntu pentesting distribution. Fast and full of new features, BlackBuntu Linux is dedicated for the Ubuntu Lovers with the aim to promote the culture of pentest and security IT environment. Let's cut the bullshit, this distribution is a GNU/Linux distribution based on Ubuntu and designed with Pentest, Security and Development in mind for the best user experiences.
+
+Designed to be fast, easy to use and provide a minimal yet complete desktop environment, thanks to its own software repositories that are constantly updated to the latest stable version of the most popular and best known ethical hacking tools. Every package currently present in BlackBuntu project is tested and up to date. If you don't find a specific tools that you need in this list please feel free to contact us. We are fast by packaging and releasing new tools on daily basis.
+
+Enjoy the simplicity of BlackBuntu’s interface created on the latest Ubuntu version. Fast, secure and with hundreds of pentest tools to choose from, for everything you want to do related with the cybersecurity, BlackBuntu has what you need. All the best, most populars and most wanted Open Source Exploitation Tools for security researchers and penetration testing professionals are included.
+
+The current version of Blackbuntu is based on Ubuntu 20.04.3 LTS. More information about the current release and download link can be found below.
 
 | Key | Description |
 | :--- | :--- |
