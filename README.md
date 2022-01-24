@@ -2,7 +2,7 @@
 
 Official repository of the Blackbuntu pentesting distribution. The current version of Blackbuntu is based on Ubuntu 20.04.3 LTS. More information about the current release and download link can be found below.
 
-| # | Description |
+| Key | Description |
 | :--- | :--- |
 | Custom Disk | blackbuntu-20.04.3-lts-amd64.iso |
 | Size | 5,43 GiB (5 833 293 824 bytes) |
