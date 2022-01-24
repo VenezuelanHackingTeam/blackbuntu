@@ -15,6 +15,10 @@ add-apt-repository -y restricted
 add-apt-repository -y universe
 add-apt-repository -y multiverse
 
+## Remove `zsys`
+## -------------
+apt-get -y purge --auto-remove zsys >/dev/null 2>&1
+
 ## Move to temp directory
 ## ----------------------
 cd /tmp/
@@ -97,8 +101,22 @@ apt-get -y clean && apt-get -y autoclean
 git clone https://github.com/neoslab/blackbuntu
 
 ## Clone `packages` repository
-## ----------------------------
+## ---------------------------
 git clone https://github.com/neoslab/packages
+
+## Generate DEB packages
+## ---------------------
+basetree="/tmp/packages"
+for basedir in "$basetree"/*;
+do
+    for deb in "$basedir"/*;
+    do
+        if test -d "$deb";
+        then
+            dpkg-deb --build --root-owner-group $deb
+        fi
+    done
+done
 
 ## Create folders tree
 ## --------------------
