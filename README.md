@@ -10,7 +10,7 @@ The current version of Blackbuntu is based on Ubuntu 20.04.3 LTS. More informati
 
 | Key | Description |
 | :--- | :--- |
-| Custom Disk | blackbuntu-20.04.3-lts-amd64.iso |
+| Custom Disk | [blackbuntu-20.04.3-lts-amd64.iso](https://neoslab.com/uploads/blackbuntu/blackbuntu-20.04.3-lts-amd64.iso) |
 | Size | 5,43 GiB (5 833 293 824 bytes) |
 | Checksum | b9a8a8b574dda8df4d838332e27c66db |
 | Checksum File | [blackbuntu-20.04.3-lts-amd64.md5](https://neoslab.com/uploads/blackbuntu/blackbuntu-20.04.3-lts-amd64.md5) |

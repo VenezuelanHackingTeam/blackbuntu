@@ -161,6 +161,15 @@ function cleanlaunchers()
 	sudo rm -f /usr/share/applications/maltego_config.desktop
 	sudo rm -f /usr/share/applications/maltego.desktop
 	sudo rm -f /usr/share/applications/ophcrack.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect.app.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect.daemon.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect.kcm.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect.nonplasma.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect_open.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect.sms.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect.smshandler.desktop
+	sudo rm -f /usr/share/applications/org.kde.kdeconnect.telhandler.desktop
+	sudo rm -f /usr/share/applications/org.kde.kded5.desktop
 	sudo rm -f /usr/share/applications/torbrowser-settings.desktop
 	sudo rm -f /usr/share/applications/ubiquity.desktop
 	sudo rm -f /usr/share/applications/wireshark.desktop

@@ -447,6 +447,15 @@ rm -f /usr/share/applications/lynis.desktop
 rm -f /usr/share/applications/maltego_config.desktop
 rm -f /usr/share/applications/maltego.desktop
 rm -f /usr/share/applications/ophcrack.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect.app.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect.daemon.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect.kcm.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect.nonplasma.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect_open.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect.sms.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect.smshandler.desktop
+rm -f /usr/share/applications/org.kde.kdeconnect.telhandler.desktop
+rm -f /usr/share/applications/org.kde.kded5.desktop
 rm -f /usr/share/applications/torbrowser-settings.desktop
 rm -f /usr/share/applications/ubiquity.desktop
 rm -f /usr/share/applications/wireshark.desktop
