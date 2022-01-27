@@ -19,6 +19,10 @@ add-apt-repository -y multiverse
 ## ----------------------
 cd /tmp/
 
+## Remove `zsys`
+## -------------
+apt-get -y purge --auto-remove zsys >/dev/null 2>&1
+
 ## Keep system safe
 ## ----------------
 apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
