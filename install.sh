@@ -303,9 +303,9 @@ dpkg -i /tmp/Maltego.v4.2.19.13940.deb
 ## Install `monero`
 ## https://www.getmonero.org
 ## -------------------------
-wget --progress=dot -O "/tmp/monero-gui-linux-x64-v0.17.2.3.tar.bz2" "https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.17.2.3.tar.bz2"
-tar -xf /tmp/monero-gui-linux-x64-v0.17.2.3.tar.bz2
-mv /tmp/monero-gui-v0.17.2.3 /opt/blackbuntu/crypto/monero
+wget --progress=dot -O "/tmp/monero-gui-linux-x64-v0.17.3.1.tar.bz2" "https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.17.3.1.tar.bz2"
+tar -xf /tmp/monero-gui-linux-x64-v0.17.3.1.tar.bz2
+mv /tmp/monero-gui-v0.17.3.1 /opt/blackbuntu/crypto/monero
 chmod +x /opt/blackbuntu/crypto/monero/monero-wallet-gui
 
 ## Install `wpscan`
