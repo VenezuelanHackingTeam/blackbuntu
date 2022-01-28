@@ -6,6 +6,10 @@ Designed to be fast, easy to use and provide a minimal yet complete desktop envi
 
 Enjoy the simplicity of BlackBuntu’s interface created on the latest Ubuntu version. Fast, secure and with hundreds of pentest tools to choose from, for everything you want to do related with the cybersecurity, BlackBuntu has what you need. All the best, most populars and most wanted Open Source Exploitation Tools for security researchers and penetration testing professionals are included.
 
+* * *
+
+#### Image Details
+
 The current version of Blackbuntu is based on Ubuntu 20.04.3 LTS. More information about the current release and download link can be found below.
 
 | Key | Description |
@@ -19,6 +23,7 @@ The current version of Blackbuntu is based on Ubuntu 20.04.3 LTS. More informati
 | Release Name | Focal Fossa |
 | Release Date | 2022/01/27 |
 | Disk Name | Blackbuntu 20.04.3 LTS amd64 "Focal Fossa" |
+
 * * *
 
 #### Installation
